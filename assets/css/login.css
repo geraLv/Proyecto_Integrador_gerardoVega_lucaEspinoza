@@ -1,0 +1,146 @@
+*{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+}
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #a7c686;
+    font-size: 1.2rem;
+    padding: 20px;
+}
+.grid-container > *{
+    box-shadow: 10px 6px 37px -13px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: 500;
+}
+.grid-container{
+    background:url(/Proyecto_Integrador/assets/img/pexels-skylar-kang-6045328.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    gap: 20px;
+    grid-template: 
+    "header" 100px
+    "main" auto
+    "footer" 100px
+    ;
+    .button{
+        align-self: center;
+        margin-top: 80px;
+        margin-bottom: 20px;
+        padding: 4px;
+        border: 0px;
+        background-color: #d5d5d5;
+        border-radius: 8px;
+        height: 40px;
+        width: 50%;
+    }
+    .header{    
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        grid-area: header;
+        background-color: #313332;
+        height: 100px;
+        color: white;   
+        .pagina{
+            width: 60%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 20px;
+            a{
+                text-decoration: none;
+                background-color: black;
+                color: white;
+                border: solid black 2px;
+                padding: 3px;
+                border-radius: 5px;
+            }
+        }
+        .inicio-secion{
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            width: 100%;
+        }
+        .inicio-secion input{
+            width: 20%;
+            margin: 20px;
+        }
+    }
+    .main{
+        justify-self: center;
+        width: 50%;
+        height: 100%;
+        grid-area: main;
+        background-color: #f1f1f1;
+        div{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 10px;
+            input{
+                padding: 4px;
+                border: 0px;
+                background-color: #d5d5d5;
+                border-radius: 8px;
+                height: 40px;
+                width: 100%;
+            }
+            .button{
+                align-self: center;
+                margin-top: 80px;
+                margin-bottom: 20px;
+                padding: 4px;
+                border: 0px;
+                background-color: #d5d5d5;
+                border-radius: 8px;
+                height: 40px;
+                width: 50%;
+            }
+        form{
+            text-align: left;
+            height: 100%;
+            h3{
+                margin: 20px;
+                margin-left: 0%;
+            }
+        }
+        }
+    }
+    .footer{
+        grid-area: footer;
+        background-color: #313332;
+        height: 200px;
+        width: 100%;
+    }
+    @media (max-width:700px){
+        .main{
+            margin-top: 20px;
+            width: 100%;
+        }
+    }
+    @media (min-width:768px){
+        grid-template: 
+        "header header" 100px
+        "main main" auto
+        "footer footer" 200px/
+        200px auto
+        ;
+    }
+    @media (min-width:992px){
+        grid-template: 
+        "header header header" 100px
+        "main main main" auto
+        "footer footer footer" 100px/
+        200px auto 200px
+        ;
+    }
+}
