@@ -24,36 +24,27 @@ body{
     gap:20px;
     grid-template: 
     "header" 150px
+    "main" auto
     "navbar" auto
     "aside" auto
-    "main" auto
     "footer" 80px;
     .header{
         grid-area: header;
         background-color:#313332;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-        input{
-            height: 40px;
-            border-radius: 5px
-        }
-        .usuario{
+        .cajon{
+            border-radius: 10px;
+            padding: 30px;
+            gap: 10px;
             display: flex;
             flex-direction: row;
-            align-items: center;
-            gap: 10px;
-            .Nombre{
+            width: auto;
+            background-color: #313332;
+            a{
                 text-decoration: none;
-                color: black;
-            }
-            .about{
-                border:#40957f solid 3px;
-                border-radius: 5px;
-                padding: 4px;
-                background-color: aliceblue;
-                text-decoration: none;
-                color: black;
+                color: #f1f1f1;
             }
         }
         .pagina{
@@ -61,10 +52,22 @@ body{
             flex-direction: row;
             align-items: center;
             gap: 10px;
+            text-align: start;
+            width: 100%;
+            input{
+                width: 100px;
+                height: 100px;
+                border: solid 1px #f1f1f1;
+                border-radius: 100%;
+                background-color: #f1f1f1;
+            }
+            h3{
+                color: #f1f1f1;
+            }
         }
         .perfil{
             border-radius: 100%;
-            width: 30px;
+            width: 100%;
             height: 80px;
         }
     }
@@ -79,27 +82,17 @@ body{
             display: flex;
             align-items: center;
             justify-content: space-between;
-            .search{
-                border-radius: 5px;
-                height: auto;
-                width: auto;
-                padding: 5px;
-            }
         }
         img{
             margin: 10px;
             width: 40px;
             height: 40px;
         }
-        .cajon{
-                padding: 30px;
-                gap: 10px;
-                display: flex;
-                flex-direction: column;
-                width: 100%;
-            }
+        
     }
     .navbar{
+        padding: 10px;
+        gap: 10px;
         grid-area: navbar;
         background-color: #f1f1f1;
         display: flex;
@@ -143,10 +136,6 @@ body{
             }
         }
     }
-    .aside{
-        background-color: green;
-        grid-area: aside;
-    }
     .footer{
         grid-area: footer;
         background-color: #313332;
@@ -156,12 +145,22 @@ body{
         grid-template: 
     "header header" auto
     "navbar navbar" auto
-    "aside aside" auto
-    "main main" auto
     "footer footer" auto/
     200px auto;
     }
     @media (min-width:992px) {
+        .header{
+            padding: 20px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            .pagina{
+            input{
+            width: 80px;
+            height: 80px;
+        }
+        }
+        }
         .navbar{
             width: 100%;
             .element{
@@ -186,8 +185,7 @@ body{
         }
         grid-template: 
     "header header header header header" auto
-    "main navbar navbar navbar navbar" auto
-    "main navbar navbar navbar navbar" auto
+    "navbar navbar navbar navbar navbar" auto
     "footer footer footer footer footer" auto/
     200px auto  auto auto 200px;
     }
