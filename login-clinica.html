@@ -35,6 +35,8 @@
     </header>
 
     <main class="main">
+        <p>Crea o Inicia sesion en tu clínica para poder empezar a ayudar a las personas a tener una mejor experiencia médica!</p>
+        </main>
         <div class="contenedor__todo">
             <div class="caja__trasera">
                 <div class="caja__trasera-login">
@@ -58,7 +60,6 @@
                 </form>
                 <form action="" class="formulario__register">
                     <h2>Iniciar Clínica</h2>
-                    <input type="text" placeholder="Nombre Titular">
                     <input type="text" placeholder="Correo Electronico">
                     <input type="text" placeholder="Nombre Clínica">
                     <input type="password" placeholder="Contraseña">
@@ -68,7 +69,6 @@
                 </form>
             </div>
         </div>
-        </main>
         <footer class="footer">
             <footer class="py-3 my-4">
                 <ul class="nav justify-content-center border-bottom pb-3 mb-3">
@@ -91,14 +91,11 @@
 document.getElementById("btn__registrarse").addEventListener("click", register);
 window.addEventListener("resize", anchoPage);
 
-//Declarando variables
 var formulario_login = document.querySelector(".formulario__login");
 var formulario_register = document.querySelector(".formulario__register");
 var contenedor_login_register = document.querySelector(".contenedor__login-register");
 var caja_trasera_login = document.querySelector(".caja__trasera-login");
 var caja_trasera_register = document.querySelector(".caja__trasera-register");
-
-    //FUNCIONES
 
 function anchoPage(){
 
