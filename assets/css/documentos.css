@@ -16,7 +16,7 @@ body{
     font-weight: 500;
 }
 .grid-container{
-    background:url(/Proyecto_Integrador/assets/img/pexels-skylar-kang-6045328.jpg);
+    background:url(/assets/img/pexels-skylar-kang-6045328.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -26,7 +26,7 @@ body{
     "header" 150px
     "navbar" auto
     "main" auto
-    "footer" 80px;
+    "footer" auto;
     .header{
         grid-area: header;
         background-color:#313332;
@@ -42,9 +42,13 @@ body{
             flex-direction: row;
             align-items: center;
             gap: 10px;
+            img{
+                height: 60px;
+                width: auto;
+            }
             .Nombre{
                 text-decoration: none;
-                color: black;
+                color: #f1f1f1;
             }
             .about{
                 border:#40957f solid 3px;
@@ -60,6 +64,13 @@ body{
             flex-direction: row;
             align-items: center;
             gap: 10px;
+            img{
+                height: 60px;
+                width: auto;
+            }
+            h2{
+                color: #f1f1f1;
+            }
         }
         .perfil{
             border-radius: 100%;
@@ -125,7 +136,6 @@ body{
                 height: auto;
                 background-color: #f1f1f1;
                 border-radius: 10px;
-                border: darkcyan solid 2px;
                 padding: 5px;
                 width: auto;
             }
@@ -134,7 +144,7 @@ body{
     .footer{
         grid-area: footer;
         background-color: #313332;
-        height: 250px;
+        height: auto;
     }
     @media (min-width:768px) {
         grid-template: 
@@ -171,7 +181,8 @@ body{
                         text-align: center;
                     }
                     img{
-                        width: 100%;
+                        align-self: space-around;
+                        width: 250px;
                         height: 10%;
                     }
                 }

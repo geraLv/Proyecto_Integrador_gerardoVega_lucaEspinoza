@@ -16,7 +16,7 @@ body{
     font-weight: 500;
 }
 .grid-container{
-    background:url(/Proyecto_Integrador/assets/img/pexels-skylar-kang-6045328.jpg);
+    background:url(/assets/img/pexels-skylar-kang-6045328.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -27,7 +27,7 @@ body{
     "navbar" auto
     "aside" auto
     "main" auto
-    "footer" 80px;
+    "footer" auto;
     .header{
         grid-area: header;
         background-color:#313332;
@@ -45,15 +45,14 @@ body{
             gap: 10px;
             .Nombre{
                 text-decoration: none;
-                color: black;
+                color:#f1f1f1;
             }
             .about{
                 border:#40957f solid 3px;
                 border-radius: 5px;
-                padding: 4px;
                 background-color: aliceblue;
                 text-decoration: none;
-                color: black;
+                color: #f1f1f1;
             }
         }
         .pagina{
@@ -63,9 +62,13 @@ body{
             gap: 10px;
         }
         .perfil{
+            padding: 0%;
             border-radius: 100%;
-            width: 30px;
+            width: 80px;
             height: 80px;
+        }
+        h2{
+            color: #f1f1f1;
         }
     }
     .main{
@@ -154,7 +157,7 @@ body{
             }
     }
     .aside{
-        background-color: green;
+        background-color: #313332;
         grid-area: aside;
     }
     .footer{
@@ -190,15 +193,18 @@ body{
             }
             .cajon{
                 flex-direction: row;
+                flex-wrap: wrap;
                 justify-content: center;
                 align-items: center;
                 .cajon-img{
+                    gap: 20px;
                     flex-direction: column;
+                    align-items: space-between;
                     .caja{
                         text-align: center;
                     }
                     img{
-                        width: 60%;
+                        width: 200px;
                         height: 10%;
                     }
                 }

@@ -16,7 +16,7 @@ body{
     font-weight: 500;
 }
 .grid-container{
-    background:url(/Proyecto_Integrador/assets/img/pexels-skylar-kang-6045328.jpg);
+    background:url(/assets/img/pexels-skylar-kang-6045328.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -27,7 +27,7 @@ body{
     "navbar" auto
     "aside" auto
     "main" auto
-    "footer" 80px;
+    "footer" auto;
     .header{
         grid-area: header;
         background-color:#313332;
@@ -61,6 +61,9 @@ body{
             flex-direction: row;
             align-items: center;
             gap: 10px;
+            h2{
+                color: #f1f1f1;
+            }
         }
         .perfil{
             border-radius: 100%;
